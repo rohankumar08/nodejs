@@ -37,4 +37,32 @@
 //*****************************************************read and write in Async mode*************************************** */
 
 const fs=require('fs');
-fs.writeFile("./ad.txt","Code is good",()=>{})
+// fs.writeFile("./ad.txt","Code is good",()=>{});
+// fs.readFile("./ad.txt","utf-8",(err,result)=>{
+//     if(err){
+//         console.log("Error",err);
+//     }
+//     else{
+//         console.log(result);
+//     }
+// })
+
+//*********************************Append*********************** */
+
+// fs.appendFileSync("./ad.txt",` and i am monotonous`);
+// fs.appendFile("./ad.txt"," add by Async with no if else callback",()=>{})
+// fs.appendFile("./ad.txt",` by Async method`,(err)=>{
+//     if(err){
+//         console.log("Error",err);
+//     }
+// })
+
+
+//***************************Copy************************************* */
+
+fs.writeFile("./a1.txt","Hello Everyone",()=>{});
+fs.writeFile("./a2.txt","",()=>{});
+fs.cp("./a1.txt","./a2.txt",()=>{})
+
+
+
