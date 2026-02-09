@@ -60,9 +60,12 @@ const fs=require('fs');
 
 //***************************Copy************************************* */
 
-fs.writeFile("./a1.txt","Hello Everyone",()=>{});
-fs.writeFile("./a2.txt","",()=>{});
-fs.cp("./a1.txt","./a2.txt",()=>{})
+// fs.writeFile("./a1.txt","Hello Everyone",()=>{});
+// fs.writeFile("./a2.txt","",()=>{});
+// fs.cp("./a1.txt","./a2.txt",()=>{})
 
 
+//***********************************Delete************************************************* */
+
+fs.unlinkSync("./ad.txt");
 
