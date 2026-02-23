@@ -36,7 +36,7 @@
 
 //*****************************************************read and write in Async mode*************************************** */
 
-const fs=require('fs');
+// const fs=require('fs');
 // fs.writeFile("./ad.txt","Code is good",()=>{});
 // fs.readFile("./ad.txt","utf-8",(err,result)=>{
 //     if(err){
@@ -67,5 +67,24 @@ const fs=require('fs');
 
 //***********************************Delete************************************************* */
 
-fs.unlinkSync("./ad.txt");
+// fs.unlinkSync("./ad.txt");
 
+
+
+//***************************************************** */
+
+const http=require('http');
+const fs=require('fs');
+const home=fs.readFileSync('abes.html')
+
+const myServer=http.createServer((req,res)=>{
+    res.statusCode==200;
+    res.setHeader('content-type','text/plain');
+
+    res.end(home);
+
+    // res.end('Hello World');
+
+});
+
+myServer.listen(8000,()=> console.log('server is run'))
